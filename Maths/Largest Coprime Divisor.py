@@ -21,9 +21,10 @@ def gcd(a, b):
 		a, b = b, a % b
 	return a
 
-def Largest_Coprime(self, A, B):
+def Largest_Coprime(A, B):
 	x = gcd(A, B) 
 	while x > 1:
+		print(A, x)
 		A = A // x  
 		x = gcd(A, x)
 	return A  

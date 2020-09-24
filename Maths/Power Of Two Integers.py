@@ -13,10 +13,11 @@ def isPower(A):
 	for i in range(2,int(n**0.5)+1):
 		y = 2
 		p = int(i**y)
-		while(p<=n and p>0):
-			if p==n:
+		
+		while p <= n  and p > 0:
+			if p == n:
 				return i, y
-			y+=1
+			y += 1
 			p = int(i**y)
 	return 0
 

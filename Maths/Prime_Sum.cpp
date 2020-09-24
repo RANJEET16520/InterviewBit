@@ -18,8 +18,6 @@ If a < c OR a==c AND b < d.
 using namespace std;
 void Prime_Sum(int n)
 {
-	vector<int>ans;
-	
 	vector<int>prime(n+1,1);
 	prime[0] = prime[1] = 0;
 
@@ -27,7 +25,7 @@ void Prime_Sum(int n)
 	{
 		if(prime[i] and i*i<n+1)
 		{
-			for(int j=i; j<n+1; j+=i)
+			for(int j=i*i; j<n+1; j+=i)
 				prime[j]=0;
 		}
 	}
@@ -39,12 +37,11 @@ void Prime_Sum(int n)
 			return;
 		}
 	}
-	return
+	return;
 }
 int main()
 {
 	int n;
 	cin>>n;
-	vector<int>ans;
 	Prime_Sum(n);
 }
